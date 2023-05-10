@@ -12,13 +12,11 @@ export function middleware(app: INestApplication): INestApplication {
     // Requires 'store' setup for production
     secret: 'tEsTeD',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: true, 
     cookie: { secure: isProduction },
   }));
   app.use(passport.initialize());
   app.use(passport.session());
-  // https://github.com/graphql/graphql-playground/issues/1283#issuecomment-703631091
-  // https://github.com/graphql/graphql-playground/issues/1283#issuecomment-1012913186
   app.use(helmet({
     contentSecurityPolicy: isProduction ? undefined : false,
     crossOriginEmbedderPolicy: isProduction ? undefined : false,
