@@ -6,7 +6,8 @@ import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { LoggerModule } from 'nestjs-pino';
 
 import { BaseModule } from './base';
-import { CommonModule, ExceptionsFilter } from './common';
+// import { CommonModule, ExceptionsFilter } from './common';
+import { CommonModule, ExceptionsFilter } from './common'
 import { configuration, loggerOptions } from './config';
 import { SampleModule as DebugSampleModule } from './debug';
 import { GqlModule } from './gql';
@@ -20,7 +21,7 @@ import { SampleModule } from './sample';
     // Configuration
     // https://docs.nestjs.com/techniques/configuration
     ConfigModule.forRoot({
-      isGlobal: true,
+      isGlobal: true, 
       load: [configuration],
     }),
     // Database
@@ -72,4 +73,4 @@ import { SampleModule } from './sample';
     },
   ],
 })
-export class AppModule {}
+export class AppModule { }

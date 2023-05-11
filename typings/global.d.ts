@@ -25,6 +25,6 @@ export declare global {
       id: string;
     }
     // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface User extends Payload {}
-  }
+    interface User extends Payload { }
+  } 
 }

@@ -9,4 +9,4 @@ import { AuthModule } from '../auth';
   imports: [TerminusModule, AuthModule, HttpModule], // Authentication
   controllers: Object.values(controllers),
 })
-export class BaseModule {}
+export class BaseModule { }

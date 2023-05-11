@@ -5,7 +5,7 @@ import type { Request } from 'express';
 
 @Injectable()
 export class RolesGuard implements CanActivate {
-  constructor(private reflector: Reflector) {}
+  constructor(private reflector: Reflector) { }
 
   public canActivate(context: ExecutionContext): boolean {
     const roles = this.reflector.getAllAndOverride<string[] | undefined>('roles', [
@@ -16,7 +16,7 @@ export class RolesGuard implements CanActivate {
     if (!roles) {
       return true;
     }
-
+    
     let request: Request;
     if (context.getType<GqlContextType>() === 'graphql') {
       const ctx = GqlExecutionContext.create(context).getContext();

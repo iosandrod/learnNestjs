@@ -7,14 +7,14 @@ import { Sampletable1 } from '#entity/sampledb1';
 import { UtilService } from '../../common';
 import type { SimpleInput, SimpleArgs } from '../dto';
 import { Simple } from '../models';
-
+ 
 @Injectable()
 export class SimpleService {
   constructor(
     @InjectPinoLogger(SimpleService.name) private readonly logger: PinoLogger,
     @InjectRepository(Sampletable1) private sampletable: Repository<Sampletable1>,
     private util: UtilService,
-  ) {}
+  ) { }
 
   public async create(data: SimpleInput): Promise<Simple> {
     this.logger.info('create');

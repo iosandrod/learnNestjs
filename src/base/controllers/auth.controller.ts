@@ -1,16 +1,18 @@
 import { Controller, Get, Post, UseGuards, Req, Res, UnauthorizedException, Body } from '@nestjs/common';
 import type { Request, Response } from 'express';
 
-import { AuthService, LocalLoginGuard, Payload, AuthenticatedGuard, LocalAuthGuard,
-  JwtAuthGuard, JwtSign, JwtVerifyGuard } from '../../auth';
+import {
+  AuthService, LocalLoginGuard, Payload, AuthenticatedGuard, LocalAuthGuard,
+  JwtAuthGuard, JwtSign, JwtVerifyGuard
+} from '../../auth';
 import { ReqUser } from '../../common';
-
+ 
 /**
  * https://docs.nestjs.com/techniques/authentication
  */
 @Controller()
 export class AuthController {
-  constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) { }
 
   /**
    * See test/e2e/local-auth.spec.ts

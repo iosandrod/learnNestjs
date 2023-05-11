@@ -20,3 +20,4 @@ export class Sampletable1 {
   @Column('timestamp', { nullable: false, default: () => 'CURRENT_TIMESTAMP', name: 'created_at' })
   created_at!: Date;
 }
+ 

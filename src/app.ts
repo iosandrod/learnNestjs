@@ -5,7 +5,8 @@ import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 
 import { middleware } from './app.middleware';
 import { AppModule } from './app.module';
-console.log('nestjsAppRun')
+
+console.log('nestjsAppRun');
 /**
  * https://docs.nestjs.com
  * https://github.com/nestjs/nest/tree/master/sample
